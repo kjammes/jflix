@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/videostreaming
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: POSTGRESQL
+  servlet:
+    multipart:
+      max-file-size: 10GB
+      max-request-size: 10GB
+
+server:
+  tomcat:
+    max-swallow-size: -1
+
+minio:
+  url: http://127.0.0.1:9000
+  username: minioadmin
+  password: minioadmin
+  put-object-part-size: 5242880
+
+app:
+  streaming:
+    default-chunk-size: 3145728
